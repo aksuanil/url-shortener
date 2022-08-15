@@ -52,13 +52,13 @@ If an invalid request is submitted, or some other error occurs, API returns a JS
 ```http
 POST /url-shortener/
 ```
-Request:
+###### Request:
 ```javascript
 {
   "url" : string,
 }
 ```
-Response:
+###### Response:
 ```javascript
 {
   "shortUrl" : string,
@@ -69,7 +69,7 @@ Response:
 ```http
 GET /:id
 ```
-Response:
+###### Response:
 ```
 Redirects to matched URL
 ```
@@ -77,13 +77,13 @@ Redirects to matched URL
 ```http
 POST /custom-shortener/
 ```
-Request:
+###### Request:
 ```json
 {
   "url" : string,
 }
 ```
-Response:
+###### Response:
 ```javascript
 {
   "shortUrl": string,
