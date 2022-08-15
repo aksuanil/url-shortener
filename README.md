@@ -48,36 +48,45 @@ Make sure to install up-to-date versions of;
 
 If an invalid request is submitted, or some other error occurs, API returns a JSON response in the following format. However, successfull calls return the JSON representation of the resources created or fetched:
 
+#### ***Shorten URL***
 ```http
-POST /api/url-shortener/
+POST /url-shortener/
 ```
-
-Response:
-
+Request:
 ```javascript
 {
   "url" : string,
+}
+```
+Response:
+```javascript
+{
+  "shortUrl" : string,
   "id" : string,
 }
 ```
-
+#### ***Redirect***
 ```http
-GET /api/url-shortener/:id
+GET /:id
 ```
 Response:
-
 ```
 Redirects to matched URL
 ```
-
+#### ***Custom Shorten URL***
 ```http
-POST /api/custom-shortener/
+POST /custom-shortener/
+```
+Request:
+```json
+{
+  "url" : string,
+}
 ```
 Response:
-
 ```javascript
 {
-  "url": string,
+  "shortUrl": string,
   "id": string,
 }
 ```

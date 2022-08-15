@@ -2,8 +2,8 @@ import { shortenUrl, customShortenUrl, redirectById } from "../controllers/short
 import express from "express";
 const router = express.Router();
 
-router.get("/api/url-shortener/:id", redirectById);
-router.post("/api/url-shortener/", shortenUrl);
-router.post("/api/custom-shortener/", customShortenUrl);
+router.get("/:id", redirectById);
+router.post("/url-shortener", shortenUrl);
+router.post("/custom-shortener", customShortenUrl);
 
 export default router;

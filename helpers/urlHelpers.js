@@ -6,7 +6,7 @@ const validateUrl = async (url) => {
 const generateUrl = async (url, hostname) => {
     const id = makeId();
     return {
-        url: hostname + "/" + id,
+        shortUrl: hostname + "/" + id,
         id: id,
     };
 }

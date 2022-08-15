@@ -43,7 +43,7 @@ export const customShortenUrl = async (req, res) => {
             });
         }
         insert(customId, url);
-        return res.status(201).send({ url: hostname + "/" + customId, id: customId });
+        return res.status(201).send({ shortUrl: hostname + "/" + customId, id: customId });
     } catch (error) {
         return res.status(500).send({
             error: "Error when generating custom URL"
