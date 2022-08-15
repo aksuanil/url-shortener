@@ -1,12 +1,12 @@
 const validateUrl = async (url) => {
-    const regex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+    const regex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
     return regex.test(url);
 };
 
-const generateUrl = async (url) => {
+const generateUrl = async (url, hostname) => {
     const id = makeId();
     return {
-        url: "http://localhost:8080/" + id,
+        url: hostname + "/" + id,
         id: id,
     };
 }
